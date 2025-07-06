@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belief Saloon & Spa Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet/blog.css">
+    <style>
+        .center{
+            display: flex;
+            justify-content: center;
+        }
+        #btn1{
+            text-decoration: none;
+    padding: 15px 40px;
+    background-color: orange;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 10px;
+        }
+        #btn1:hover{
+            background-color: black;
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <header>
+        <h1>Belief Saloon & Spa Blog</h1>
+        <p>Your guide to beauty, wellness, and relaxation</p>
+    </header> -->
+
+    <div class="nav">
+        <div class="logo">
+            <img src="stylesheet/salon_logo.png" alt="logo">
+        </div>
+        <ul class="navlink">
+            <li><a href="./index.html">Home</a></li>
+                <li><a href="./pages/services.html">Services</a></li>
+                <li><a href="./aboutus.html">About Us</a></li>
+                <li><a href="./contactus.html">Contact Us</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+        </ul>
+        <a id="nav-login" href="./login.html">Login</a>
+    </div>
+
+    <div class="container">
+
+        <article>
+            <h2>The Benefits of Regular Facials</h2>
+            <img src="stylesheet/Facial.jpg" alt="Facial Treatment"><br>
+            <p>A facial at our salon and spa is a multi-step treatment designed to rejuvenate and revitalize your skin.
+                It typically includes cleansing, exfoliation, extraction (if needed), massage, and a mask. Facials can
+                improve skin texture, unclog pores, boost circulation, and promote relaxation, leaving your skin glowing
+                and refreshed.</p>
+        </article>
+
+        <article>
+            <h2>Choosing the Right Hairstyle for Your Face Shape</h2>
+            <img src="stylesheet/hairstyle.jpg" alt="Hairstyle"><br>
+            <p>Finding the right hairstyle can dramatically enhance your appearance and boost your confidence. Whether
+                you prefer a classic cut or a trendy new style, our expert stylists can help you find the perfect look.
+                We consider your face shape, hair texture, and lifestyle to create a hairstyle that complements your
+                features and suits your personality. From bobs and lobs to layers and updos, we offer a range of styling
+                options to help you achieve your desired look.</p>
+        </article>
+
+        <article>
+            <h2>The Art of Relaxation: Massage Therapy</h2>
+            <img src="stylesheet/massage.jpg" alt="Massage Therapy"><br>
+            <p>Massage therapy offers a powerful way to relieve stress, reduce muscle tension, and improve overall
+                well-being. Our skilled massage therapists use various techniques, such as Swedish, deep tissue, and hot
+                stone massage, to address your specific needs. Whether you're seeking relaxation, pain relief, or injury
+                recovery, massage therapy can provide numerous benefits. It can improve circulation, reduce
+                inflammation, enhance sleep quality, and boost your mood. Experience the healing touch of massage and
+                discover a renewed sense of balance and vitality. Book your massage session today and prioritize your
+                well-being.</p>
+        </article>
+
+        <article>
+            <h2>Nail Care Tips for Healthy and Beautiful Nails</h2>
+            <img src="stylesheet/nailcare.jpg" alt="Nail Care"><br>
+            <p>Healthy and beautiful nails are an important part of overall self-care. Proper nail care not only
+                enhances your appearance but also prevents nail problems like brittleness, breakage, and infections. Our
+                nail services include manicures, pedicures, and nail enhancements, all performed with attention to
+                detail and hygiene. We use high-quality products and techniques to ensure your nails are healthy and
+                strong. From shaping and filing to cuticle care and polish application, we provide a relaxing and
+                pampering experience that leaves your nails looking their best. Regular nail care can also improve
+                circulation in your fingertips and promote healthy nail growth..</p>
+        </article>
+
+    </div>
+    <div class="center">
+        <a id="btn1" href="./Review.html">Read reviews</a>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="box box1">
+                <h3>BELIEF salon and spa</h3>
+                <p>
+                    Discover a haven of tranquility at <span>BELIEF SALON</span>. Our dedicated team of skilled
+                    professionals is committed to providing top-notch beauty and wellness services.
+                </p>
+            </div>
+            <div class="box box2">
+                <h3>Useful Links</h3>
+                <p><a href="#">Home</a></p>
+                <p><a href="#">Services</a></p>
+                <p><a href="aboutus.html">About us</a></p>
+                <p><a href="contactus.html">Contact Us</a></p>
+            </div>
+            <div class="box box3">
+                <h3>Contact Us</h3>
+                <p>Belief Saloon And Spa.</p>
+                <p>Call :- +91 1234567890</p>
+                <P>beliefsalon@gmail.com</P>
+            </div>
+            <div class="box box4">
+                <h3>NewsLetter</h3>
+                <input type="email" placeholder="Enter your email">
+                <button id="btn" onclick="click()">Subscribe</button>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        const articles = document.querySelectorAll('article');
+
+        function checkSlide() 
+        {
+            articles.forEach(article => {
+                const isHalfShown = (window.scrollY + window.innerHeight) > (article.offsetTop + article.offsetHeight / 2);
+                article.classList.toggle('show', isHalfShown);
+            });
+        }
+
+        window.addEventListener('scroll', checkSlide);
+    </script>
+
+</body>
+
+</html>

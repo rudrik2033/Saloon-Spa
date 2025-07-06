@@ -1,0 +1,84 @@
+.main{
+    width: 100%;
+    height: 50vh;
+    background-image: url('../assets/services/header1.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border: 1px solid black; */
+    
+    color: orange;
+    position: relative;
+    
+}
+.main .main-heading{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.main .main-heading h1
+{
+    font-size: 3rem;
+}
+.main span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.525);
+}
+
+.service .right{
+    width: 60%;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* border: 1px solid black; */
+}
+#cart-item{
+    margin: auto;
+    width: 60%;
+}
+#cart-item .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+#cart-item .box .box-img{
+    width: 200px;
+    height: 100%;
+}
+#cart-item .box .box-img img{
+    width: 100%;
+    height: 100%;
+}
+#cart-item .box button{
+    /* background-color: black;
+    color: orange; */
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+}
+.payment-div{
+    display: flex;
+    justify-content: center;
+}
+#paybtn{
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: black;
+    color: orange;
+    cursor: pointer;
+}

@@ -1,0 +1,140 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main{
+    width: 100%;
+    height: 50vh;
+    background-image: url('../assets/services/header1.jpg');
+    background-size: cover;
+    background-position: center;
+    /* border: 1px solid black; */
+    
+    color: orange;
+    position: relative;
+    
+}
+.main .main-heading{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.main .main-heading h1
+{
+    font-size: 3rem;
+}
+.main span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.525);
+}
+.service{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 40px 0;
+}
+.service .left{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* border: 1px solid black; */
+}
+.service .left h1{
+    margin: 20px 0;
+    color: orange;
+    position: relative;
+}
+.service .left h1::after
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: orange;
+    bottom: -10px;
+    left: 0;
+    border-radius: 20px;
+
+}
+.left .service-logo{
+    width: 80%;
+    height: 200px;
+}
+.left .service-logo img{
+    width: 100%;
+    height: 100%;
+}
+.left .service-category{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    
+}
+.left .service-category button{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.left .service-category button:active{
+    background-color: black;
+    color: orange;
+}
+.service .right{
+    width: 60%;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* border: 1px solid black; */
+}
+.service .right .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+.service .right .box .box-img{
+    width: 200px;
+    height: 100%;
+}
+.service .right .box .box-img img{
+    width: 100%;
+    height: 100%;
+}
+.service .right .box button{
+    /* background-color: black;
+    color: orange; */
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+}
+.cart-div{
+    display: flex;
+    justify-content: center;
+}
+#cartbtn{
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: black;
+    color: orange;
+    cursor: pointer;
+}

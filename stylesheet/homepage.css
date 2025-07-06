@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+button{
+    cursor: pointer;
+}
+
+/* slider css */
+.slider-frame{
+    width: 100%;
+    height: calc(100vh - 80px);
+    overflow: scroll; 
+}
+.slider-frame::-webkit-scrollbar{
+    display: none;
+}
+.slider-frame .slider{
+    width: 500%;
+    height: 100%;
+    display: flex;
+    
+    animation: slide 40s infinite;
+    animation-delay: 1s;
+}
+.slider .slider-img{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.532);
+}
+.slider img{
+    width: 100vw;
+    height: 100%;
+    border: 1px solid black;
+    position: relative;
+    z-index: -1;
+}
+.slider .details{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 100;
+    width: 60%;
+    max-width: 600px;
+    transform: translate(-10%,0%);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.slider .details p{
+    color: white;
+}
+.slider .details h1{
+    color: rgb(255, 174, 25);
+    font-size: 2.5rem;
+}
+.slider button{
+    width: 150px;
+    height: 50px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 10px;
+}
+.slider .btn1{
+    background-color: white;
+    color: black;  
+    margin-right: 10px;
+    cursor: pointer;
+}
+.slider .btn1:hover{
+    background-color: black;
+    color: white;
+}
+.slider .btn2{
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+}
+.slider .btn2:hover{
+    background-color: white;
+    color: orange;
+}
+@keyframes slide{
+    0%{transform: translateX(0);}
+    20%{transform: translateX(-100vw);}
+    40%{transform: translateX(-200vw);}
+    60%{transform: translateX(-300vw);}
+    80%{transform: translateX(-400vw);}
+    100%{transform: translateX(0);}
+    
+}
+
+
+.about{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.about .left{
+    width: 30%;
+}
+.about .left img{
+    width: 80%;
+    height: 400px;
+}
+.about .right{
+    width: 50%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.about .right h1{
+    color: orange;
+    font-size: 2.5rem;
+    position: relative;
+}
+.about .right h1::after{
+    content: "";
+    width:100px;
+    height: 5px;
+    background: linear-gradient(orange,yellow);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+}
+.about p span{
+    color: orange;
+}
+
+
+
+/* our services css */
+.services{
+    width: 100%;
+    /* background-color: #151515; */
+    padding: 20px;
+    position: relative;
+    background-image: url('assets/slider/image4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.services h1{
+    color: black;
+    text-shadow: 5px 5px 5px white;
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+}
+.services h1::after{
+    content: "";
+    width:100px;
+    height: 5px;
+    background: linear-gradient(orange,yellow);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+}
+.services .boxes{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+    position: relative;
+    z-index: 100;
+}
+.services .boxes .box{
+    width: 350px;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.services .boxes .box img{
+    width: 80px;
+    height: 80px;
+}
+.services .box p{
+    font-size: .9rem;
+}
+.services .box button{
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    transition:all 1s ease;
+}
+.services .box button:hover{
+    background: linear-gradient(to right bottom,red,green);
+    color: white;
+    
+    
+}
+.bgblack{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* out mission section  */
+.our-mission{
+    flex-direction: row-reverse;
+}
+
+
+/* get in touch form  */
+.feedback{
+    width: 100%;
+    background-color: black;
+    padding: 20px 0;
+    background-image: url('../assets/homepage/slider/image5.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+}
+.feedback h1{
+    font-size: 2rem;
+    color: black;
+    text-shadow: 5px 5px 5px white;
+    text-align: center;
+    position: relative;
+}
+.feedback h1::after{
+    content: "";
+    width:100px;
+    height: 5px;
+    background: linear-gradient(orange,yellow);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+}
+.feedback form{
+    margin: 20px auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+.feedback form input{
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+.feedback form textarea{
+    width: 100%;
+    padding: 5px 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+.feedback button{
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+}
+
+
+
+
+@media screen and (max-width:500px){
+    .nav .navlink{
+        display: none;
+    }
+
+    .slider-frame .slider .slider-img{
+        width: 100vw;
+        font-size: 12px;
+    }
+    .slider .details{
+        width: 80%;
+    }
+    .slider .details h1{
+        font-size: 2rem;
+    }
+    .slider .details button{
+        width: 100px;
+        font-size: 1rem;
+    }
+
+    .about{
+        font-size: 12px;
+    }
+    .about .left img{
+        width: 90%;
+        height: 300px;
+    }
+    .about .right,.about .left{
+        width: 45%;
+    }
+    
+    .services .boxes{
+        flex-wrap: wrap;
+    }
+
+    .our-mission .right h1{
+        font-size: 2rem;
+    }
+
+    .feedback form{
+        width: 80%;
+    }
+
+    .footer{
+        flex-wrap: wrap;
+    }
+    .footer .box{
+        width: 40%;
+    }
+}

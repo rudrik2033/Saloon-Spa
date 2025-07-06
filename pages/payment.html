@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Appointment</title>
+    <link rel="stylesheet" href="../stylesheet/appointment.css"> 
+    <link rel="stylesheet" href="../stylesheet/navbar.css"> 
+    <link rel="stylesheet" href="../stylesheet/footer.css"> 
+    <style>
+        main{
+            width: 50%;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <span id="layer"></span>
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <img src="../assets/homepage/salon_logo.png" alt="logo">
+            </div>
+            <ul class="navlink">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="../aboutus.html">About Us</a></li>
+                <li><a href="../contactus.html">Contact Us</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+            </ul>
+            <a id="nav-login" href="../login.html">Login</a>
+        </div>
+    </header>
+        <h1 id="heading" style="color: orange;">Payment Now</h1>
+   
+
+        <main>
+            <section id="payment-section">
+                <h2>Payment Information</h2>
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="card-number">Card Number:</label>
+                        <input type="text" id="card-number" name="card-number" required>
+                        <span id="cardNumberError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date:</label>
+                        <input type="month" id="expiry-date" name="expiry-date" required>
+                        <span id="expiryDateError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" required>
+                        <span id="cvvError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardholder-name">Cardholder Name:</label>
+                        <input type="text" id="cardholder-name" name="cardholder-name" required>
+                        <span id="cardholderNameError" class="error"></span>
+                    </div>
+    
+                    <button onclick="finalstage()" id="button" type="submit">Pay Now</button>
+                </form>
+            </section>
+        </main>
+
+    <footer>
+        <div class="footer">
+            <div class="box box1">
+                <h3>BELIEF salon and spa</h3>
+                <p>
+                    Discover a haven of tranquility at <span>BELIEF SALON</span>. Our dedicated team of skilled
+                    professionals is committed to providing top-notch beauty and wellness services.
+                </p>
+            </div>
+            <div class="box box2">
+                <h3>Useful Links</h3>
+                <p><a href="#">Home</a></p>
+                <p><a href="#">Services</a></p>
+                <p><a href="#">About us</a></p>
+                <p><a href="#">Contact Us</a></p>
+            </div>
+            <div class="box box3">
+                <h3>Contact Us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p>Call :- 01 23456789</p>
+                <P>beliefsalon@gmail.com</P>
+            </div>
+            <div class="box box4">
+                <h3>NewsLetter</h3>
+                <input type="email" placeholder="enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="../javascript/appointment.js">
+        
+    </script> 
+    <script>
+        function finalstage()
+        {
+            alert("your appointment is confirmed");
+            window.location.href = "../index.html";
+        }
+    </script>
+
+</body>
+</html>

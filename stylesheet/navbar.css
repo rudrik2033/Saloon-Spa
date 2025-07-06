@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 0 20px;
+}
+.nav .logo{
+    width: 250px;
+    height: 100%;
+}
+.nav .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.3rem;
+}
+.nav ul li{
+    list-style: none;
+    position: relative;
+    
+}
+.nav ul li a{
+    text-decoration: none;
+    color: black;
+    transition: all .3s ease-in-out;
+}
+.nav ul li::after{
+    content: "";
+    width: 0;
+    height: 4px;
+    background-color: orange;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%,0);
+    transition: all .3s ease-in-out;
+
+}
+.nav ul li a:hover{
+    color: rgb(252, 147, 0);
+}
+.nav ul li:hover::after{
+    width: 100%;
+}
+.nav #nav-login{
+    text-decoration: none;
+    padding: 15px 40px;
+    background-color: orange;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 10px;
+    transition: all 1s ease;
+}
+.nav #nav-login:hover{
+    background: linear-gradient(to right bottom,red,green);
+    color: white;
+}
